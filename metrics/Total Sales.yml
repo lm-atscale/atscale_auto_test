@@ -1,0 +1,9 @@
+unique_name: Total Sales
+object_type: metric
+label: Total Sales
+description: "Total internet sales revenue in dollars — sum of salesamount. Base additive measure."
+calculation_method: sum
+format: "$#,##0.00"
+dataset: factinternetsales
+column: salesamount
+unrelated_dimensions_handling: repeat

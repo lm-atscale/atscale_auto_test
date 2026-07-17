@@ -1,0 +1,7 @@
+unique_name: as_adventure_simple_catalog
+object_type: catalog
+label: AS Adventure Simple
+description: Minimal AtScale test model over ATSCALE_TUTORIALS.as_adventure — one fact (factinternetsales), one degenerate dimension (Sales Order Number), one measure (Total Sales). Built to exercise the create/validate/push/publish/query pipeline.
+version: 1.7
+aggressive_agg_promotion: false
+build_speculative_aggs: false

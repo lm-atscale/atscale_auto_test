@@ -1,0 +1,6 @@
+unique_name: Connection - Snowflake Partner
+label: Connection - Snowflake Partner
+object_type: connection
+as_connection: Snowflake Partner
+database: ATSCALE_TUTORIALS
+schema: as_adventure

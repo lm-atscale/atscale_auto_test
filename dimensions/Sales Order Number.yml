@@ -1,0 +1,26 @@
+unique_name: Sales Order Number
+object_type: dimension
+label: Sales Order Number
+description: "Degenerate dimension: sales order number (order ID, e.g. SO43697) resident on the fact table — no separate dimension table."
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: Sales Order Number
+    label: Sales Order Number
+    folder: Order Attributes
+    description: "Single-level grouping of internet sales by sales order number."
+
+    levels:
+
+      - unique_name: Sales Order Number
+
+level_attributes:
+
+  - unique_name: Sales Order Number
+    label: Sales Order Number
+    description: "Sales order number / order ID (degenerate, fact-resident)."
+    dataset: factinternetsales
+    name_column: salesordernumber
+    key_columns:
+      - salesordernumber
