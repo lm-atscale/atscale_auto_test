@@ -1,6 +1,6 @@
 unique_name: Connection - Snowflake Partner
 label: Connection - Snowflake Partner
 object_type: connection
-as_connection: Snowflake Partner
-database: ATSCALE_TUTORIALS
-schema: as_adventure
+as_connection: SnowflakePartner
+database: SE_DEMO_LIBRARY
+schema: AS_ADVENTURE_SE_DEMO2
