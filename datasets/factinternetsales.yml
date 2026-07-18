@@ -1,9 +1,9 @@
 unique_name: factinternetsales
 object_type: dataset
 label: factinternetsales
-description: "Internet sales fact table (order-line grain) from ATSCALE_TUTORIALS.as_adventure. Minimal projection for the pipeline test: sales order number (degenerate dimension) and sales amount (measure)."
+description: "Internet sales fact table (order-line grain) from SE_DEMO_LIBRARY.AS_ADVENTURE_SE_DEMO2. Minimal projection for the pipeline test: sales order number (degenerate dimension) and sales amount (measure)."
 connection_id: Connection - Snowflake Partner
-table: factinternetsales
+table: FACTINTERNETSALES
 
 columns:
   - name: salesordernumber
