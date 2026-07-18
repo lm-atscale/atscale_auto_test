@@ -1,15 +1,13 @@
 unique_name: as_adventure_simple
 object_type: model
 label: AS Adventure Simple
-description: "Minimal test model: factinternetsales fact, Sales Order Number degenerate dimension, Total Sales measure."
-visible: true
-
-relationships: []
-
+description: >-
+  Minimal test model: factinternetsales fact, Sales Order Number degenerate
+  dimension, Total Sales measure.
 dimensions:
   - Sales Order Number
-
 metrics:
-
   - unique_name: Total Sales
     folder: Sales Metrics
+relationships: []
+visible: true
