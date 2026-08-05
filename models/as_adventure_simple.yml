@@ -2,10 +2,10 @@ unique_name: as_adventure_simple
 object_type: model
 label: AS Adventure Simple
 description: >-
-  Minimal test model: factinternetsales fact, Sales Order Number degenerate
-  dimension, Total Sales measure.
-dimensions:
-  - Sales Order Number
+  DAX education test model (stage 1 of 4): factinternetsales fact, Total
+  Sales measure, no dimensions yet. Product/Category and Date dimensions
+  come next, then the degenerate Sales Order Number dimension is re-added
+  last.
 metrics:
   - unique_name: Total Sales
     folder: Sales Metrics
