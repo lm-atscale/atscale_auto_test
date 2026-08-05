@@ -1,0 +1,28 @@
+unique_name: datecustom
+object_type: dataset
+label: datecustom
+description: >-
+  Date dimension table (AdventureWorks DateCustom) from
+  SE_DEMO_LIBRARY.AS_ADVENTURE_SE_DEMO2. Simplified projection (Year/Quarter/
+  Month/Day only) for DAX education testing — the full physical table has
+  ~99 columns across three calendar systems, not needed here.
+connection_id: Connection - Internet Sales
+table: DATECUSTOM
+
+columns:
+  - name: datekey
+    data_type: int
+  - name: date_name
+    data_type: string
+  - name: year
+    data_type: string
+  - name: year_name
+    data_type: string
+  - name: quarter
+    data_type: string
+  - name: quarter_name
+    data_type: string
+  - name: month
+    data_type: string
+  - name: month_name
+    data_type: string

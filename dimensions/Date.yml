@@ -1,0 +1,48 @@
+unique_name: Date
+object_type: dimension
+label: Date
+description: >-
+  Date dimension (AdventureWorks DateCustom), joined to factinternetsales
+  twice via role-play — Order Date (orderdatekey) and Ship Date
+  (shipdatekey) — to exercise the Server-Side DAX field guide's
+  role-played-date time-intelligence constraint (DATESYTD/MTD/QTD).
+hierarchies:
+  - unique_name: Date
+    label: Date
+    description: Year > Quarter > Month > Day hierarchy.
+    folder: Date Attributes
+    levels:
+      - unique_name: Year
+      - unique_name: Quarter
+      - unique_name: Month
+      - unique_name: Day
+level_attributes:
+  - unique_name: Year
+    label: Year
+    dataset: datecustom
+    key_columns:
+      - year
+    name_column: year_name
+    time_unit: year
+  - unique_name: Quarter
+    label: Quarter
+    dataset: datecustom
+    key_columns:
+      - quarter
+    name_column: quarter_name
+    time_unit: quarter
+  - unique_name: Month
+    label: Month
+    dataset: datecustom
+    key_columns:
+      - month
+    name_column: month_name
+    time_unit: month
+  - unique_name: Day
+    label: Day
+    dataset: datecustom
+    key_columns:
+      - datekey
+    name_column: date_name
+    time_unit: day
+type: time

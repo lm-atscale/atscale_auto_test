@@ -1,0 +1,9 @@
+unique_name: Average Sales Amount
+object_type: metric
+label: Average Sales Amount
+description: "Average sales amount per order line (average calculation method, contrast with Total Sales' sum)."
+calculation_method: average
+format: "$#,##0.00"
+dataset: factinternetsales
+column: salesamount
+unrelated_dimensions_handling: repeat

@@ -2,12 +2,29 @@ unique_name: as_adventure_simple
 object_type: model
 label: AS Adventure Simple
 description: >-
-  DAX education test model (stage 2 of 4): factinternetsales fact (full
-  column projection), Total Sales measure, Product dimension joined via
-  productkey. Date dimension(s) come next, then the degenerate Sales Order
-  Number dimension is re-added last.
+  DAX education test model (finished): factinternetsales fact (full column
+  projection), Product dimension, role-played Date dimension (Order Date /
+  Ship Date), degenerate Sales Order Number dimension, and a range of sum/
+  average/distinct-count metrics — built to exercise the Server-Side DAX
+  field guide's confirmed patterns and known constraints.
+dimensions:
+  - Sales Order Number
 metrics:
   - unique_name: Total Sales
+    folder: Sales Metrics
+  - unique_name: Total Tax
+    folder: Sales Metrics
+  - unique_name: Total Quantity
+    folder: Sales Metrics
+  - unique_name: Average Unit Price
+    folder: Sales Metrics
+  - unique_name: Average Sales Amount
+    folder: Sales Metrics
+  - unique_name: Order Count
+    folder: Sales Metrics
+  - unique_name: Customer Count
+    folder: Sales Metrics
+  - unique_name: Product Count
     folder: Sales Metrics
 relationships:
   - unique_name: factinternetsales_Product
@@ -18,4 +35,22 @@ relationships:
     to:
       dimension: Product
       level: Product Name
+  - unique_name: factinternetsales_Date_Order
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: Date
+      level: Day
+    role_play: "Order {0}"
+  - unique_name: factinternetsales_Date_Ship
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - shipdatekey
+    to:
+      dimension: Date
+      level: Day
+    role_play: "Ship {0}"
 visible: true

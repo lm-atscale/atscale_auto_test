@@ -1,0 +1,9 @@
+unique_name: Customer Count
+object_type: metric
+label: Customer Count
+description: "Distinct count of customers who placed internet sales orders (count distinct calculation method)."
+calculation_method: count distinct
+format: "#,##0"
+dataset: factinternetsales
+column: customerkey
+unrelated_dimensions_handling: repeat

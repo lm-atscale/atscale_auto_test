@@ -1,0 +1,9 @@
+unique_name: Total Tax
+object_type: metric
+label: Total Tax
+description: "Total tax amount collected on internet sales. Base additive measure (sum)."
+calculation_method: sum
+format: "$#,##0.00"
+dataset: factinternetsales
+column: taxamt
+unrelated_dimensions_handling: repeat

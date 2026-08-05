@@ -1,0 +1,9 @@
+unique_name: Average Unit Price
+object_type: metric
+label: Average Unit Price
+description: "Average unit price across internet sales order lines (average calculation method)."
+calculation_method: average
+format: "$#,##0.00"
+dataset: factinternetsales
+column: unitprice
+unrelated_dimensions_handling: repeat

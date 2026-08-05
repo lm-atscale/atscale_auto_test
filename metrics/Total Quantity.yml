@@ -1,0 +1,9 @@
+unique_name: Total Quantity
+object_type: metric
+label: Total Quantity
+description: "Total units sold. Base additive measure (sum)."
+calculation_method: sum
+format: "#,##0"
+dataset: factinternetsales
+column: orderquantity
+unrelated_dimensions_handling: repeat

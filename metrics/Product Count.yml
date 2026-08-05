@@ -1,0 +1,9 @@
+unique_name: Product Count
+object_type: metric
+label: Product Count
+description: "Distinct count of products that appear in internet sales order lines (count distinct calculation method)."
+calculation_method: count distinct
+format: "#,##0"
+dataset: factinternetsales
+column: productkey
+unrelated_dimensions_handling: repeat
