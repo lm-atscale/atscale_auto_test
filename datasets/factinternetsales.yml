@@ -1,12 +1,36 @@
 unique_name: factinternetsales
 object_type: dataset
 label: factinternetsales
-description: "Internet sales fact table (order-line grain) from SE_DEMO_LIBRARY.AS_ADVENTURE_SE_DEMO2. Minimal projection for the pipeline test: sales order number (degenerate dimension) and sales amount (measure)."
+description: "Internet sales fact table (order-line grain) from SE_DEMO_LIBRARY.AS_ADVENTURE_SE_DEMO2. Full column projection for DAX education testing (product/date relationships, degenerate attributes, measures)."
 connection_id: Connection - Internet Sales
 table: FACTINTERNETSALES
 
 columns:
   - name: salesordernumber
     data_type: string
+  - name: salesorderlinenumber
+    data_type: int
+  - name: sales_reasons
+    data_type: string
+  - name: productkey
+    data_type: int
+  - name: product_info
+    data_type: string
+  - name: orderdatekey
+    data_type: int
+  - name: customerkey
+    data_type: int
+  - name: orderquantity
+    data_type: int
+  - name: unitprice
+    data_type: double
   - name: salesamount
     data_type: double
+  - name: taxamt
+    data_type: double
+  - name: orderdate
+    data_type: string
+  - name: shipdatekey
+    data_type: int
+  - name: currencykey
+    data_type: int

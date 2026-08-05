@@ -2,12 +2,20 @@ unique_name: as_adventure_simple
 object_type: model
 label: AS Adventure Simple
 description: >-
-  DAX education test model (stage 1 of 4): factinternetsales fact, Total
-  Sales measure, no dimensions yet. Product/Category and Date dimensions
-  come next, then the degenerate Sales Order Number dimension is re-added
-  last.
+  DAX education test model (stage 2 of 4): factinternetsales fact (full
+  column projection), Total Sales measure, Product dimension joined via
+  productkey. Date dimension(s) come next, then the degenerate Sales Order
+  Number dimension is re-added last.
 metrics:
   - unique_name: Total Sales
     folder: Sales Metrics
-relationships: []
+relationships:
+  - unique_name: factinternetsales_Product
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product
+      level: Product Name
 visible: true
