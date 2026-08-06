@@ -1,0 +1,7 @@
+unique_name: DAX Test 24 - ISBLANK
+object_type: metric_calc
+label: DAX Test 24 - ISBLANK
+description: "Pass 2, common real pattern (seen in MBRF_Commercial, 44 uses): ISBLANK null-guard."
+expression: >-
+  IF(ISBLANK([Total Sales]), -1, [Total Sales])
+format: "$#,##0.00"

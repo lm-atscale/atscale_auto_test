@@ -60,6 +60,16 @@ metrics:
     folder: DAX Tests
   - unique_name: DAX Test 16 - VAR Row Context
     folder: DAX Tests
+  - unique_name: DAX Test 17 - ROUND Scale -7
+    folder: DAX Tests
+  - unique_name: DAX Test 18 - ROUND Scale -8
+    folder: DAX Tests
+  - unique_name: DAX Test 20 - DATESQTD
+    folder: DAX Tests
+  - unique_name: DAX Test 21 - DATESMTD
+    folder: DAX Tests
+  - unique_name: DAX Test 23 - DISTINCTCOUNT
+    folder: DAX Tests
 relationships:
   - unique_name: factinternetsales_Product
     from:

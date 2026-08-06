@@ -1,0 +1,7 @@
+unique_name: DAX Test 22 - HASONEVALUE
+object_type: metric_calc
+label: DAX Test 22 - HASONEVALUE
+description: "Pass 2, common real pattern (seen in MBRF_Commercial): HASONEVALUE(column) - isolates whether the VALUES()-family bug (Test 08/09) is specific to COUNTROWS/FILTER or affects this whole function family."
+expression: >-
+  IF(HASONEVALUE([Product Line]), [Total Sales], -1)
+format: "$#,##0.00"

@@ -1,0 +1,7 @@
+unique_name: DAX Test 19 - PARALLELPERIOD
+object_type: metric_calc
+label: DAX Test 19 - PARALLELPERIOD
+description: "Pass 2: retest the guide's already-confirmed time-intelligence workaround (PARALLELPERIOD, not DATESYTD) on our own role-played Order Date."
+expression: >-
+  CALCULATE([Total Sales], PARALLELPERIOD([Order Day], -1, YEAR))
+format: "$#,##0.00"

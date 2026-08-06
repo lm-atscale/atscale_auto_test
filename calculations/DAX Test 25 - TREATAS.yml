@@ -1,0 +1,7 @@
+unique_name: DAX Test 25 - TREATAS
+object_type: metric_calc
+label: DAX Test 25 - TREATAS
+description: "Pass 2, common real pattern (seen in MBRF_Commercial): TREATAS applying an explicit member list as a filter. Expect exactly the Road (R) product line total, 22,898,983.96, when queried unfiltered."
+expression: >-
+  CALCULATE([Total Sales], TREATAS({"R "}, [Product Line]))
+format: "$#,##0.00"

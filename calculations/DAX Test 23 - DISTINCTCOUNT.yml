@@ -1,0 +1,7 @@
+unique_name: DAX Test 23 - DISTINCTCOUNT
+object_type: metric_calc
+label: DAX Test 23 - DISTINCTCOUNT
+description: "Pass 2: DISTINCTCOUNTNOBLANK(column) - the documented AtScale function (plain DISTINCTCOUNT is not on the supported list; DISTINCTCOUNTNOBLANK is). Isolates whether Test 08's bug is about VALUES()+COUNTROWS specifically, or distinct-counting in DAX generally."
+expression: >-
+  DISTINCTCOUNTNOBLANK([Product Name])
+format: "fixed"

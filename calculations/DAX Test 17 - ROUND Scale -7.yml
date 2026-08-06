@@ -1,0 +1,7 @@
+unique_name: DAX Test 17 - ROUND Scale -7
+object_type: metric_calc
+label: DAX Test 17 - ROUND Scale -7
+description: "Pass 2: bracketing the ROUND negative-scale threshold between -6 (correct) and -9 (silent 0)."
+expression: >-
+  ROUND([Total Sales], -7)
+format: "fixed"
