@@ -1,0 +1,7 @@
+unique_name: DAX Test 06 - SUMX Iterator
+object_type: metric_calc
+label: DAX Test 06 - SUMX Iterator
+description: "Tier 2, common/undocumented: SUMX(VALUES(...), [measure]) iterator pattern. Self-checking: should equal Total Sales when unfiltered."
+expression: >-
+  SUMX(VALUES([Product Line]), [Total Sales])
+format: "$#,##0.00"

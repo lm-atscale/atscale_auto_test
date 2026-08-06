@@ -1,0 +1,6 @@
+unique_name: DAX Test 10 - SELECTEDVALUE
+object_type: metric_calc
+label: DAX Test 10 - SELECTEDVALUE
+description: "Tier 2, common/undocumented (real pattern seen in MBRF_Commercial): SELECTEDVALUE with a text default. Note: this returns text, not a number."
+expression: >-
+  SELECTEDVALUE([Product Line], "Multiple")

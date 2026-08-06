@@ -1,0 +1,10 @@
+unique_name: DAX Test 05 - Pct of Total ALLSELECTED
+object_type: metric_calc
+label: DAX Test 05 - Pct of Total ALLSELECTED
+description: "Tier 1 re-confirm: COALESCE + CALCULATE + ALLSELECTED(column), scoped to Product Line."
+expression: >-
+  VAR Current = COALESCE([Total Sales], 0)
+  VAR Selected = CALCULATE([Total Sales], ALLSELECTED([Product Line]))
+  RETURN
+    DIVIDE(Current, Selected)
+format: "percent"

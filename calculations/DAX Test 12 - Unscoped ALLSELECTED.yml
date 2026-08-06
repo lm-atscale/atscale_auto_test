@@ -1,0 +1,7 @@
+unique_name: DAX Test 12 - Unscoped ALLSELECTED
+object_type: metric_calc
+label: DAX Test 12 - Unscoped ALLSELECTED
+description: "Tier 3 constraint retest: unscoped ALLSELECTED() on the multi-fact model. Same predicted failure mode as Test 11."
+expression: >-
+  CALCULATE([Total Sales], ALLSELECTED())
+format: "$#,##0.00"

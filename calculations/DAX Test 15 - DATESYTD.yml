@@ -1,0 +1,7 @@
+unique_name: DAX Test 15 - DATESYTD
+object_type: metric_calc
+label: DAX Test 15 - DATESYTD
+description: "Tier 3 constraint retest: DATESYTD over the role-played Order Date. Same predicted failure mode as Test 14."
+expression: >-
+  CALCULATE([Total Sales], DATESYTD([Order Day]))
+format: "$#,##0.00"

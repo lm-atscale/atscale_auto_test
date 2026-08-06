@@ -1,0 +1,10 @@
+unique_name: DAX Test 04 - Pct of Total ALL
+object_type: metric_calc
+label: DAX Test 04 - Pct of Total ALL
+description: "Tier 1 re-confirm: CALCULATE + ALL(column), scoped to Product Line."
+expression: >-
+  DIVIDE(
+    [Total Sales],
+    CALCULATE([Total Sales], ALL([Product Line]))
+  )
+format: "percent"

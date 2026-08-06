@@ -1,0 +1,7 @@
+unique_name: DAX Test 07 - AVERAGEX Iterator
+object_type: metric_calc
+label: DAX Test 07 - AVERAGEX Iterator
+description: "Tier 2, common/undocumented: AVERAGEX(VALUES(...), [measure]) iterator pattern."
+expression: >-
+  AVERAGEX(VALUES([Product Line]), [Total Sales])
+format: "$#,##0.00"

@@ -1,0 +1,11 @@
+unique_name: DAX Test 02 - IF Over Average Metric
+object_type: metric_calc
+label: DAX Test 02 - IF Over Average Metric
+description: "Tier 1 new coverage: IF comparing an 'average'-type base metric, not just 'sum' (original guide only tested IF on a sum measure)."
+expression: >-
+  IF(
+    [Average Sales Amount] > 1000,
+    [Average Sales Amount],
+    [Total Sales]
+  )
+format: "$#,##0.00"

@@ -1,0 +1,9 @@
+unique_name: DAX Test 16 - VAR Row Context
+object_type: metric_calc
+label: DAX Test 16 - VAR Row Context
+description: "Tier 3 constraint retest: does VAR capture the current dimension row (Order Year) correctly? Known Constraint #4 predicts it does not behave as a row iterator."
+expression: >-
+  VAR CurrentYr = [Order Year]
+  RETURN
+    IF(CurrentYr = "Calendar 2006", [Total Sales], 0)
+format: "$#,##0.00"

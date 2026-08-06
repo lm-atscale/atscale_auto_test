@@ -1,0 +1,7 @@
+unique_name: DAX Test 13b - ROUND Negative Scale -9
+object_type: metric_calc
+label: DAX Test 13b - ROUND Negative Scale -9
+description: "Retest of Test 13 at the guide's exact original scale (-9, rounding to billions) rather than -6, to check if the negative-scale error is magnitude-dependent."
+expression: >-
+  ROUND([Total Sales], -9)
+format: "fixed"

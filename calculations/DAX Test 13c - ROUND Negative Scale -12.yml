@@ -1,0 +1,7 @@
+unique_name: DAX Test 13c - ROUND Negative Scale -12
+object_type: metric_calc
+label: DAX Test 13c - ROUND Negative Scale -12
+description: "Retest of Test 13 at the exact scale from the guide's error message example (Decimal(18,-12))."
+expression: >-
+  ROUND([Total Sales], -12)
+format: "fixed"

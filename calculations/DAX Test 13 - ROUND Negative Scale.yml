@@ -1,0 +1,7 @@
+unique_name: DAX Test 13 - ROUND Negative Scale
+object_type: metric_calc
+label: DAX Test 13 - ROUND Negative Scale
+description: "Tier 3 constraint retest: ROUND with negative scale. Known Constraint #2 predicts a Decimal(18,-N) engine error."
+expression: >-
+  ROUND([Total Sales], -6)
+format: "fixed"

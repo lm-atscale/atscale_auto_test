@@ -1,0 +1,7 @@
+unique_name: DAX Test 08 - COUNTROWS VALUES
+object_type: metric_calc
+label: DAX Test 08 - COUNTROWS VALUES
+description: "Tier 2, common/undocumented: COUNTROWS(VALUES(...)) - expect 4 unfiltered (4 Product Lines), 1 when sliced to a single line."
+expression: >-
+  COUNTROWS(VALUES([Product Line]))
+format: "fixed"

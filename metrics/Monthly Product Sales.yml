@@ -1,0 +1,9 @@
+unique_name: Monthly Product Sales
+object_type: metric
+label: Monthly Product Sales
+description: "Sum of salesamount re-aggregated to Product x Month grain (second fact, for multi-fact DAX testing)."
+calculation_method: sum
+format: "$#,##0.00"
+dataset: monthly_product_sales
+column: monthlyproductsales
+unrelated_dimensions_handling: repeat

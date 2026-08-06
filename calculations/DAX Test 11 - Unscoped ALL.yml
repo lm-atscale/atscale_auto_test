@@ -1,0 +1,7 @@
+unique_name: DAX Test 11 - Unscoped ALL
+object_type: metric_calc
+label: DAX Test 11 - Unscoped ALL
+description: "Tier 3 constraint retest: unscoped ALL() on a now-genuinely-multi-fact model (Total Sales + Monthly Product Sales share the Product dimension). Known Constraint #1 predicts 'Unexpected number of virtual cubes'."
+expression: >-
+  CALCULATE([Total Sales], ALL())
+format: "$#,##0.00"

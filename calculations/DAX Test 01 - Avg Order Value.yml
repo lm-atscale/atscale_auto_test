@@ -1,0 +1,10 @@
+unique_name: DAX Test 01 - Avg Order Value
+object_type: metric_calc
+label: DAX Test 01 - Avg Order Value
+description: "Tier 1 re-confirm: VAR/RETURN + DIVIDE over two different base metrics (sum / count distinct)."
+expression: >-
+  VAR Total = [Total Sales]
+  VAR Cnt = [Order Count]
+  RETURN
+    DIVIDE(Total, Cnt)
+format: "$#,##0.00"

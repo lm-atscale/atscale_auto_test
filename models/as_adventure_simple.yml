@@ -26,6 +26,40 @@ metrics:
     folder: Sales Metrics
   - unique_name: Product Count
     folder: Sales Metrics
+  - unique_name: Monthly Product Sales
+    folder: Sales Metrics
+  - unique_name: DAX Test 01 - Avg Order Value
+    folder: DAX Tests
+  - unique_name: DAX Test 02 - IF Over Average Metric
+    folder: DAX Tests
+  - unique_name: DAX Test 03 - Switch Tiered Rounding
+    folder: DAX Tests
+  - unique_name: DAX Test 04 - Pct of Total ALL
+    folder: DAX Tests
+  - unique_name: DAX Test 05 - Pct of Total ALLSELECTED
+    folder: DAX Tests
+  - unique_name: DAX Test 06 - SUMX Iterator
+    folder: DAX Tests
+  - unique_name: DAX Test 07 - AVERAGEX Iterator
+    folder: DAX Tests
+  - unique_name: DAX Test 08 - COUNTROWS VALUES
+    folder: DAX Tests
+  - unique_name: DAX Test 09 - FILTER CALCULATE
+    folder: DAX Tests
+  - unique_name: DAX Test 11 - Unscoped ALL
+    folder: DAX Tests
+  - unique_name: DAX Test 12 - Unscoped ALLSELECTED
+    folder: DAX Tests
+  - unique_name: DAX Test 13 - ROUND Negative Scale
+    folder: DAX Tests
+  - unique_name: DAX Test 13b - ROUND Negative Scale -9
+    folder: DAX Tests
+  - unique_name: DAX Test 13c - ROUND Negative Scale -12
+    folder: DAX Tests
+  - unique_name: DAX Test 15 - DATESYTD
+    folder: DAX Tests
+  - unique_name: DAX Test 16 - VAR Row Context
+    folder: DAX Tests
 relationships:
   - unique_name: factinternetsales_Product
     from:
@@ -53,4 +87,12 @@ relationships:
       dimension: Date
       level: Day
     role_play: "Ship {0}"
+  - unique_name: monthly_product_sales_Product
+    from:
+      dataset: monthly_product_sales
+      join_columns:
+        - productkey
+    to:
+      dimension: Product
+      level: Product Name
 visible: true

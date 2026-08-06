@@ -1,0 +1,10 @@
+unique_name: DAX Test 09 - FILTER CALCULATE
+object_type: metric_calc
+label: DAX Test 09 - FILTER CALCULATE
+description: "Tier 2, common/undocumented: CALCULATE + FILTER(VALUES(...), [measure] > threshold) - filtering a dimension by a measure comparison inside FILTER."
+expression: >-
+  CALCULATE(
+    [Total Sales],
+    FILTER(VALUES([Product Line]), [Total Sales] > 10000000)
+  )
+format: "$#,##0.00"

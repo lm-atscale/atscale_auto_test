@@ -1,0 +1,23 @@
+unique_name: monthly_product_sales
+object_type: dataset
+label: monthly_product_sales
+description: >-
+  Query dataset (SQL view, not a physical table): factinternetsales
+  re-aggregated to Product x Month grain. Exists purely to create a second
+  fact / virtual cube for testing DAX ALL()/ALLSELECTED() behavior on
+  multi-fact models (Server-Side DAX field guide Known Constraint #1). Same
+  underlying data as factinternetsales, no new warehouse objects.
+connection_id: Connection - Internet Sales
+sql: >-
+  SELECT productkey, FLOOR(orderdatekey / 100)::INT AS ordermonthkey,
+  SUM(salesamount) AS monthlyproductsales FROM
+  SE_DEMO_LIBRARY.AS_ADVENTURE_SE_DEMO2.FACTINTERNETSALES GROUP BY
+  productkey, FLOOR(orderdatekey / 100)::INT
+
+columns:
+  - name: productkey
+    data_type: int
+  - name: ordermonthkey
+    data_type: int
+  - name: monthlyproductsales
+    data_type: double

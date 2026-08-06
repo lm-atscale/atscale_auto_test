@@ -1,0 +1,14 @@
+unique_name: DAX Test 03 - Switch Tiered Rounding
+object_type: metric_calc
+label: DAX Test 03 - Switch Tiered Rounding
+description: "Tier 1 re-confirm: SWITCH(TRUE(), ...) + ROUND + VAR arithmetic."
+expression: >-
+  VAR ValueM = [Total Sales] / 1000000
+  RETURN
+    SWITCH(
+      TRUE(),
+      [Total Sales] >= 10000000, ROUND(ValueM, 0),
+      [Total Sales] >= 1000000,  ROUND(ValueM, 1),
+      ROUND(ValueM, 2)
+    )
+format: "fixed"
