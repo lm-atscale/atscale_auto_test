@@ -1,7 +1,7 @@
 unique_name: DAX Test 14 - SAMEPERIODLASTYEAR
 object_type: metric_calc
 label: DAX Test 14 - SAMEPERIODLASTYEAR
-description: "Tier 3 constraint retest: time intelligence over the role-played Order Date. Known Constraint #3 predicts NULL on role-played date models."
+description: "Tier 3 constraint retest: time intelligence over the role-played Order Date. Known Constraint #4 predicts NULL on role-played date models."
 expression: >-
   CALCULATE([Total Sales], SAMEPERIODLASTYEAR([Order Day]))
 format: "$#,##0.00"

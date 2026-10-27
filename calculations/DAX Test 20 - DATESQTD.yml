@@ -1,7 +1,7 @@
 unique_name: DAX Test 20 - DATESQTD
 object_type: metric_calc
 label: DAX Test 20 - DATESQTD
-description: "Pass 2: retest DATESQTD (guide's Known Constraint #3 predicts NULL, same as DATESYTD, on role-played dates)."
+description: "Pass 2: retest DATESQTD (guide's Known Constraint #4 predicts NULL, same as DATESYTD, on role-played dates)."
 expression: >-
   CALCULATE([Total Sales], DATESQTD([Order Day]))
 format: "$#,##0.00"

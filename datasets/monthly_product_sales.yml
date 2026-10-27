@@ -5,14 +5,14 @@ description: >-
   Query dataset (SQL view, not a physical table): factinternetsales
   re-aggregated to Product x Month grain. Exists purely to create a second
   fact / virtual cube for testing DAX ALL()/ALLSELECTED() behavior on
-  multi-fact models (Server-Side DAX field guide Known Constraint #1). Same
+  multi-fact models (Server-Side DAX field guide Known Constraint #3). Source columns are double-quoted because the AS_ADVENTURE columns are lower case and quoted in Snowflake; unquoted names fail with invalid identifier 'PRODUCTKEY'. Same
   underlying data as factinternetsales, no new warehouse objects.
 connection_id: Connection - Internet Sales
 sql: >-
-  SELECT productkey, FLOOR(orderdatekey / 100)::INT AS ordermonthkey,
-  SUM(salesamount) AS monthlyproductsales FROM
+  SELECT "productkey", FLOOR("orderdatekey" / 100)::INT AS "ordermonthkey",
+  SUM("salesamount") AS "monthlyproductsales" FROM
   SE_DEMO_LIBRARY.AS_ADVENTURE_SE_DEMO2.FACTINTERNETSALES GROUP BY
-  productkey, FLOOR(orderdatekey / 100)::INT
+  "productkey", FLOOR("orderdatekey" / 100)::INT
 
 columns:
   - name: productkey
