@@ -15,14 +15,14 @@ columns:
   - name: date_name
     data_type: string
   - name: year
-    data_type: string
+    data_type: datetime
   - name: year_name
     data_type: string
   - name: quarter
-    data_type: string
+    data_type: datetime
   - name: quarter_name
     data_type: string
   - name: month
-    data_type: string
+    data_type: datetime
   - name: month_name
     data_type: string
